@@ -57,7 +57,7 @@ const SlipHistoryForm = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center">Submit Slip History</h2>
+        <h2 className="text-2xl font-bold mb-6 text-black text-center">Submit Slip History</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-gray-700">Email</label>
@@ -101,6 +101,7 @@ const SlipHistoryForm = () => {
               className="w-full p-2 border border-gray-300 rounded mt-1"
               required
             />
+            
           </div>
           <div className="flex justify-end">
             <button

@@ -29,6 +29,15 @@ body {
   margin: 0 auto;
 }
 
+.item-container>.item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-container>.item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .item {
   background: linear-gradient(to bottom, #00338c, #0400ff77);
   padding: 10px;

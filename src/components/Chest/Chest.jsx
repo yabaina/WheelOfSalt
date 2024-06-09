@@ -30,7 +30,7 @@ const Chest = () => {
   return (
     <div className="App">
       <header className="App-header">
-        Roblox Cases
+        PRODUCT
       </header>
       <div className="item-container">
         {items.map((item) => (

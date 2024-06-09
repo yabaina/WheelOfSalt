@@ -291,7 +291,7 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product }) => {
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -301,7 +301,7 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product }) => {
                 id="status"
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                 required
               >
                 <option value="active">Active</option>
@@ -314,7 +314,7 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product }) => {
                 id="type"
                 value={type}
                 onChange={(e) => setType(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                 required
               >
                 <option value="gameAccount">Game Account</option>
@@ -328,7 +328,7 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product }) => {
                 id="order"
                 value={order}
                 onChange={(e) => setOrder(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -339,7 +339,7 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product }) => {
                 id="price"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -349,7 +349,7 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product }) => {
                 id="productDetails"
                 value={productDetails}
                 onChange={(e) => setProductDetails(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -367,26 +367,26 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product }) => {
               <button
                 type="button"
                 onClick={() => setIsItemModalOpen(true)}
-                className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="px-4 py-2 bg-green-400 text-black rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
               >
                 เพิ่มไอเท็ม
               </button>
               <ul className="mt-4">
                 {items.map((item, index) => (
-                  <li key={index} className="flex items-center justify-between mb-2">
+                  <li key={index} className="flex items-center text-black justify-between mb-2">
                     <span>{item.name}</span>
                     <div>
                       <button
                         type="button"
                         onClick={() => handleEditItem(index)}
-                        className="px-2 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 mr-2"
+                        className="px-2 py-1 bg-yellow-400 text-black rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 mr-2"
                       >
                         แก้ไข
                       </button>
                       <button
                         type="button"
                         onClick={() => handleDeleteItem(index)}
-                        className="px-2 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
+                        className="px-2 py-1 bg-red-400 text-black rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
                       >
                         ลบ
                       </button>
@@ -399,13 +399,13 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product }) => {
               <button
                 type="button"
                 onClick={onClose}
-                className="mr-2 px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                className="mr-2 px-4 py-2 bg-gray-300 text-black rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
               >
                 ยกเลิก
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-2 bg-blue-300 text-black rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 บันทึก
               </button>
@@ -462,15 +462,15 @@ const ManageItem = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 ">
       <h1 className="text-2xl font-bold mb-4">จัดการสินค้า</h1>
       <button
         onClick={handleAddProduct}
-        className="mb-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+        className="mb-4 px-4 py-2 bg-green-400 text-black rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
       >
         เพิ่มสินค้า
       </button>
-      <table className="min-w-full border">
+      <table className="min-w-full border bg-white text-black">
         <thead>
           <tr>
             <th className="py-2 px-4 border-b">ชื่อสินค้า</th>
@@ -492,13 +492,13 @@ const ManageItem = () => {
               <td className="py-2 px-4 border-b">
                 <button
                   onClick={() => handleEditProduct(product)}
-                  className="px-2 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 mr-2"
+                  className="px-2 py-1 bg-yellow-400 text-black rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 mr-2"
                 >
                   แก้ไข
                 </button>
                 <button
                   onClick={() => handleDeleteProduct(product._id)}
-                  className="px-2 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
+                  className="px-2 py-1 bg-red-400 text-black rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
                 >
                   ลบ
                 </button>
