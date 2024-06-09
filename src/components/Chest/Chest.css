@@ -10,14 +10,22 @@ body {
   align-items: center;
 }
 
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
 .App {
   text-align: center;
   color: white;
 }
 
 .App-header {
-  font-size: 2em;
-  margin: 20px;
+  text-align: center;
+  margin-top: 60px;
+  
 }
 
 .item-container {

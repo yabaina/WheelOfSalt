@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import bannerImage from './banner.png';
 import './Chest.css';
 
 const Chest = () => {
@@ -30,7 +31,7 @@ const Chest = () => {
   return (
     <div className="App">
       <header className="App-header">
-        PRODUCT
+        <img src={bannerImage} alt="Banner" className="banner-image" />
       </header>
       <div className="item-container">
         {items.map((item) => (

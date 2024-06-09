@@ -1,0 +1,35 @@
+.purchase-history {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.purchase-history h2 {
+    text-align: center;
+    color: #000000;
+}
+
+.purchase-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.purchase-history th,
+.purchase-history td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #8b8b8b;
+
+}
+
+.purchase-history th {
+    background-color: #696969;
+    color: #ede6e6;
+}
+
+.purchase-history tr:hover {
+    background-color: #a7a7a7d0;
+}

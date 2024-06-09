@@ -14,6 +14,9 @@ import LoginForm from './components/Login/Login';
 import AdminNavbar from './components/AdminSide/AdminNavbar/AdminNavbar';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import SlipHistoryForm from './components/SlipHistory/SlipHistory';
+import TopUpHistory from './components/TopUpHistory/TopUpHistory';
+import PurchaseHistory from './components/PurchaseHistory/PurchaseHistory';
+
 
 import './index.css';
 
@@ -93,6 +96,15 @@ const App = () => {
             <SlipHistoryForm/>
             </div>} /> 
             
+          <Route path="/topup-history" element={<div>
+            <Navbar />
+            <TopUpHistory />
+          </div>} />
+          <Route path="/purchase-history" element={<div>
+            <Navbar />
+            <PurchaseHistory />
+          </div>} />
+          
         </Routes>
       </BrowserRouter>
     </div>

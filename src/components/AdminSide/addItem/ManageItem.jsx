@@ -34,14 +34,14 @@ const InformationModal = ({ isOpen, onClose, onSave, initialInformation }) => {
     <div className={`popup-container fixed z-30 inset-0 overflow-y-auto ${isOpen ? 'block' : 'hidden'}`}>
       <div className="flex items-center justify-center min-h-screen">
         <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
-          <h2 className="text-lg font-bold mb-4">ข้อมูล</h2>
+          <h2 className="text-lg text-black font-bold mb-4">ข้อมูล</h2>
           {informationList.map((info, index) => (
             <div key={index} className="mb-4 flex items-center">
               <input
                 type="text"
                 value={info}
                 onChange={(e) => handleChange(index, e)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
               />
               <button
                 type="button"
@@ -55,7 +55,7 @@ const InformationModal = ({ isOpen, onClose, onSave, initialInformation }) => {
           <button
             type="button"
             onClick={handleAddField}
-            className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 mb-4"
+            className="px-4 py-2 bg-green-400 text-black rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 mb-4"
           >
             เพิ่มช่องข้อมูล
           </button>
@@ -122,7 +122,7 @@ const ItemModal = ({ isOpen, onClose, onAddItem, item }) => {
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -133,7 +133,7 @@ const ItemModal = ({ isOpen, onClose, onAddItem, item }) => {
                 id="minDegree"
                 value={minDegree}
                 onChange={(e) => setMinDegree(parseInt(e.target.value, 10))}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -144,7 +144,7 @@ const ItemModal = ({ isOpen, onClose, onAddItem, item }) => {
                 id="maxDegree"
                 value={maxDegree}
                 onChange={(e) => setMaxDegree(parseInt(e.target.value, 10))}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                 required
               />
             </div>
@@ -153,7 +153,7 @@ const ItemModal = ({ isOpen, onClose, onAddItem, item }) => {
               <button
                 type="button"
                 onClick={() => setIsInformationModalOpen(true)}
-                className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="px-4 py-2 bg-green-400 text-black rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
               >
                 จัดการข้อมูล
               </button>
@@ -281,7 +281,7 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product }) => {
   return (
     <div className={`popup-container fixed z-30 inset-0 overflow-y-auto ${isOpen ? 'block' : 'hidden'}`}>
       <div className="flex items-center justify-center min-h-screen">
-        <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-2xl">
+        <div className="bg-white text-black rounded-lg shadow-lg p-6 w-full max-w-2xl">
           <h2 className="text-lg font-bold mb-4">{product ? 'แก้ไขสินค้า' : 'เพิ่มสินค้า'}</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
