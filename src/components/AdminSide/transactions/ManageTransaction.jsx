@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 const TransactionList = ({ transactions, onManage, onViewProof }) => (
   <div className="mt-8">
     <table className="table-auto w-full">
@@ -163,12 +164,14 @@ const ManageTransaction = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Manage Transactions</h1>
-      <TransactionList
-        transactions={transactions}
-        onManage={handleManage}
-        onViewProof={handleViewProof}
-      />
+      <div className="bg-white text-black text-center border-gray-300 p-4 rounded-lg">
+        <h1 className="text-2xl text-black text-left font-bold mb-4">Manage Transactions</h1>
+        <TransactionList
+          transactions={transactions}
+          onManage={handleManage}
+          onViewProof={handleViewProof}
+        />
+      </div>
       <ManageModal
         isOpen={isModalOpen}
         transaction={selectedTransaction}
